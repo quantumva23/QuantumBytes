@@ -1,0 +1,394 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+     <title> post</title>
+     <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+    
+        imageInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.src = '';
+                imagePreview.style.display = 'none';
+            }
+        });
+    </script>
+
+\
+
+<script>
+    function showImagePreview(input) {
+        const imagePreview = document.getElementById('imagePreview');
+        const imageContainer = document.querySelector('.image-container');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                imagePreview.src = e.target.result;
+                imageContainer.style.display = 'flex'; // Show the image container
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+    </head>
+
+    <body> 
+      <style>
+        body{
+            background-color: rgb(01,91,91);
+        }
+        img{
+            width:2cm;
+        }
+        li{
+            list-style: none;
+            padding-left:1cm;
+            font-size: large;
+            color:white;
+        }
+        li:hover{
+            color:white;
+        }
+        div[class="onleft"]{
+            display: flex;
+        }
+        
+      
+        div[class="onright"]{
+            float: right;
+            position: relative;
+            bottom:40px;
+        }
+        div[class="row1"]{
+            font-size: large; 
+            font-family: 'Times New Roman';
+            padding:20px;
+            
+        }
+        button{
+            width:4cm;
+            height:1cm;
+            font-size: large;
+            margin-right: 20px;
+            border-radius: 5px;
+            border:none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button:hover{
+            background-color: blue;
+            color:white;
+        }
+        div[class="box"]{
+           background-color:white ;
+            width:5cm;
+            margin:auto;
+            color: 3a9a9a9;
+            padding:1cm;
+            font-size:larger;
+            border-radius: 10px;
+            position: relative;
+            top:2cm;
+            opacity: 80%;
+        }
+        p[class="heading"]{
+            font-size:30;
+            font-family: 'Times New Roman';
+            font-weight: 900;
+            text-align: center;
+            color:cyan;
+        }
+
+        input[type="email"],input[type="password"]{
+            width:5cm;
+            height:1cm;
+            border-radius: 5px;
+            outline:none;
+            border:none;
+            background-color: #444444;
+            color: black;
+        }
+        hr[class="line"]{
+            position: relative;
+            bottom:20px;
+        }
+        p[class="lastline"]{
+            font-size: 16px;
+        }
+        div[class="row2"]{
+            background-image:url(3357683.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            height:20cm;
+        }
+        span{
+            text-decoration: underline;
+            color:lightgreen;
+
+        }
+        span:hover{
+            color:rgb(4, 133, 15);
+        }
+        img[class="logoimage"]{
+width:1.2cm;
+height:1.2cm;
+}
+header[class="header"]{
+margin-top: 20px;
+margin-bottom:20px;
+padding-bottom: 10px;
+}
+
+button[class="loginbutton"]{
+width: 3cm;
+height:0.8cm;
+background-color:8908eb;
+color:white;
+border:none;
+outline:none;
+border-radius: 5px;
+}
+button[class="loginbutton"]:hover{
+background-color: rgb(0, 151, 126);
+}
+button[class="loginbutton"]:active{
+background-color: rgb(54, 0, 98);
+color:white;
+}
+a[class="headerlink"]:hover{
+opacity: 100%;
+}
+a[class="headerlink"]:active{
+opacity: 100%;
+color:8908eb;
+}
+ul[class="headerlist"]{
+list-style-type: none;
+display: flex;
+margin-left:10px;
+position: absolute;
+top:5%;
+left:7%;
+
+}
+li[class="headerHeading"]{
+margin-left: 1cm;
+}
+div[class="buttons"]{
+position: absolute;
+top:15px;
+left:75%;
+}
+a[class="headerlink"]{
+text-decoration: none;
+opacity: 80%;
+color:white;
+}
+img[class="logoimage"]{
+width:1.2cm;
+height:1.2cm;
+}
+header[class="header"]{
+margin-top: 20px;
+margin-bottom:20px;
+padding-bottom: 10px;
+}
+
+button[class="loginbutton"]{
+width: 3cm;
+height:0.8cm;
+background-color:8908eb;
+color:white;
+border:none;
+outline:none;
+border-radius: 5px;
+}
+button[class="loginbutton"]:hover{
+background-color: rgb(45, 151, 0);
+}
+button[class="loginbutton"]:active{
+background-color: rgb(0, 98, 7);
+color:white;
+}
+a[class="headerlink"]:hover{
+opacity: 100%;
+}
+a[class="headerlink"]:active{
+opacity: 100%;
+color:8908eb;
+}
+ul[class="headerlist"]{
+list-style-type: none;
+display: flex;
+margin-left:10px;
+position: absolute;
+top:5%;
+left:7%;
+
+}
+li[class="headerHeading"]{
+margin-left: 1cm;
+}
+div[class="buttons"]{
+position: absolute;
+top:15px;
+left:75%;
+}
+a[class="headerlink"]{
+text-decoration: none;
+opacity: 80%;
+color: #a9a9a9;
+}
+    </style>
+<div>
+<header class="header">
+  <img src="qb.webp" alt="Logo" class="logoimage">
+  <nav>
+    <ul class="headerlist">
+      <li class="headerHeading"><a href="frontpage.html" class="headerlink">Home</a></li>
+      <li class="headerHeading"><a href="search.html" class="headerlink">Search </a></li>
+      <li class="headerHeading"><a href="#" class="headerlink">Post</a></li>
+      <li class="headerHeading"><a href="contact.html" class="headerlink">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    <a href="singinpage.html"><button class="loginbutton">Login</button></a>
+    <a href="signup.html"><button class="loginbutton" style="background-color:rgb(45, 151, 0); ;">Sign Up</button>
+        </a>
+  </div>
+</header>
+</div>
+    <style>
+   .toptext
+{   
+    font-size: 60px; 
+    font-style: bold,italic;
+    color: gray;
+    text-align: center;
+
+
+
+
+}
+    </style>
+            
+    <div>
+     <p class="toptext">
+        Want to return something that you found? Post below!
+     </p>
+
+    </div>        
+   <div style="
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    height: 500px;
+    
+    ">
+    <div>   
+<img src="/te.png" width="30px" style=" margin-left: 150px;">
+<div style="display: grid; grid-template-columns: 1fr 3fr; height: 500px;">
+    <div>
+        <input type="file" id="imageInput" name="image" accept="image/*" onchange="showImagePreview(this);">
+        <div class="image-container">
+            <img id="imagePreview" src="" alt="Image Preview" >
+        </div>
+    </div>
+    <div>
+</div>
+     <p style="
+     margin-left: 150px
+     ; 
+     "> </p>
+
+    </div>
+    </div>
+   <div >
+<label for="Description"></label>
+    <textarea type="text" id="Description" rows="15" cols="100" class="Description" ><input type="text" placeholder="Please give description"></input>
+        
+     
+    </textarea>
+     
+   </div>
+   </div>
+
+   <div style="display: flexbox;
+        flex-direction:column
+         ">
+     <div style="background-color: whitesmoke;">
+ <div style="background-color: whitesmoke;">
+ <p style="display: block;
+  font-size: 30px;
+  color: maroon; ">
+
+ Contact us:
+ </p>
+ 
+ <div style="display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;
+    ">
+  <a href="mailto: example@gmail.com " > <img src="gmail.png"></a>
+    <div style="background-color: whitesmoke;" >
+      <a href="mailto: example@gmail.com " > <p>
+           example@gmail.com
+        </p>
+      </a>
+       </div>
+</div>
+  <div style="display: inline-block;
+      margin-left: 100px;
+    margin-right: 100px; ">
+    <a href="https//wa.me/9972xxxxxx"><img src="whatsapp.png">
+    <div style="background-color: whitesmoke;" ></a>
+        <p >
+           +91-9972xxxxxx
+        </p>
+       
+       </div>
+  </div>
+  <div style="display: inline-block;
+    margin-left: 100px;
+    margin-right: 100px;">
+    <a href=https//m.facebook.com><img src="f.webp"></a>
+  >
+  <div style="background-color: whitesmoke;" >
+    <p >
+       connect on facebook
+    </p>
+   
+   </div>
+  </div>
+  <div style="display: inline-block;
+  margin-left: 100px;
+  margin-right: 100px;">
+  <a href=https//m.instagram.com><img src="i.png"></a>
+>
+<div style="background-color: whitesmoke;" >
+  <p >
+     connect on instagram
+  </p>
+ 
+ </div>
+</div>
+ </div>
+
+     </div>
+   
+
+  </body>
+    
+
+
+  </html>
